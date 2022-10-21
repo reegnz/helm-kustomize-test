@@ -1,0 +1,15 @@
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: hello-world
+name: hello-world
+version: 0.1.0
+repo: https://helm.github.io/examples
+releaseName: hello-world
+includeCRDs: true
+valuesInline:
+  image:
+    tag: 1.15
+  serviceAccount:
+    create: false
+    name: test

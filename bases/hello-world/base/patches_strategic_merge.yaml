@@ -1,0 +1,14 @@
+apiVersion: builtin
+kind: PatchStrategicMergeTransformer
+metadata:
+  name: patches_strategic_merge
+# paths:
+# - ./patch_serviceaccount.yaml
+
+patches: |
+  apiVersion: v1
+  kind: ServiceAccount
+  metadata:
+    name: test
+    annotations:
+      hello: world
